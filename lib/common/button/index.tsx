@@ -1,4 +1,4 @@
-import { styled } from '@lib/utils/theme';
+import { CSS, styled } from '@lib/utils/theme';
 import { PropsWithChildren } from 'react';
 
 const StyledButton = styled('div', {
@@ -11,28 +11,24 @@ const StyledButton = styled('div', {
         background: 'purple',
         color: 'white'
       },
-      default: {
+      primary: {
         background: '$dark1',
-        color: '$light1'
+        color: '$light2'
       }
     }
+  },
+  defaultVariants: {
+    variant: 'primary'
   }
 });
 
 type Props = {
-  variant?: 'default' | 'purple';
+  variant?: 'primary' | 'purple' | undefined;
+  css?: CSS;
 } & React.HTMLAttributes<HTMLDivElement>;
 
-const Button = ({
-  children,
-  variant = 'default',
-  ...props
-}: PropsWithChildren<Props>) => {
-  return (
-    <StyledButton variant={variant} {...props}>
-      {children}
-    </StyledButton>
-  );
+const Button = ({ children, ...props }: PropsWithChildren<Props>) => {
+  return <StyledButton {...props}>{children}</StyledButton>;
 };
 
 export default Button;

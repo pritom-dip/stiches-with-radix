@@ -54,9 +54,9 @@ export const {
     }
   },
   media: {
-    bp1: '(min-width: 480px)',
-    bp2: '(min-width: 768px)',
-    bp3: '(min-width: 992px)'
+    bp1: '(max-width: 480px)',
+    bp2: '(max-width: 768px)',
+    bp3: '(max-width: 992px)'
   },
   utils: {
     marginX: (value: any) => ({ marginLeft: value, marginRight: value }),

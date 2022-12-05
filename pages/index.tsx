@@ -2,6 +2,8 @@ import Head from 'next/head';
 import { Typography } from '@lib/common/typography';
 import Button from '@lib/common/button';
 import { XStack } from '@lib/common/stack';
+import Container from '@lib/common/container';
+import Box from '@lib/common/box';
 
 export default function Home() {
   return (
@@ -12,12 +14,33 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <Typography>sdfsdfsd</Typography>
-        <XStack>
-          <Button>primary button</Button>
+      <Container>
+        <XStack wrap>
+          <Box css={{ width: '25%', padding: '10px' }}>
+            <Button variant="purple">primary button</Button>
+          </Box>
+
+          <Box css={{ width: '25%', padding: '10px' }}>
+            <Button variant="purple">primary button</Button>
+          </Box>
+
+          <Box css={{ width: '25%', padding: '10px' }}>
+            <Button variant="purple">primary button</Button>
+          </Box>
+
+          <Box css={{ width: '25%', padding: '10px' }}>
+            <Button variant="purple">primary button</Button>
+          </Box>
+
+          <Box css={{ width: '25%', padding: '10px' }}>
+            <Button variant="purple">primary button</Button>
+          </Box>
+
+          <Box css={{ width: '25%', padding: '10px' }}>
+            <Button variant="purple">primary button</Button>
+          </Box>
         </XStack>
-      </main>
+      </Container>
     </div>
   );
 }
